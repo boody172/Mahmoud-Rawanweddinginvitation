@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-arabic: "Aref Ruqaa", serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Tajawal", sans-serif;
+
+  --color-ink: #151008;
+  --color-panel: #1d1610;
+  --color-panel-light: #2a2016;
+  --color-gold: #cfa968;
+  --color-gold-bright: #e9c988;
+  --color-gold-dim: #8a7148;
+  --color-burgundy: #5a1726;
+  --color-burgundy-deep: #3a0e17;
+  --color-cream: #f3ead9;
+  --color-cream-dim: #c9bfa9;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  overscroll-behavior-y: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Thin, elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dim);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+}
+.font-display {
+  font-family: var(--font-display);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #a9823f 0%, #e9c988 35%, #fff3d6 50%, #e9c988 65%, #a9823f 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-shimmer {
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.ornate-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-gold);
+}
+.ornate-divider::before,
+.ornate-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  max-width: 5rem;
+  background: linear-gradient(90deg, transparent, var(--color-gold-dim));
+}
+.ornate-divider::after {
+  background: linear-gradient(90deg, var(--color-gold-dim), transparent);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Gate doors                                                             */
+/* ---------------------------------------------------------------------- */
+
+.door-panel {
+  background:
+    repeating-radial-gradient(circle at 50% 50%, rgba(233, 201, 136, 0.08) 0px, transparent 2px, transparent 42px),
+    radial-gradient(ellipse at 50% 20%, rgba(233, 201, 136, 0.12), transparent 60%),
+    linear-gradient(145deg, #4a1220 0%, #5a1726 35%, #3a0e17 70%, #2a0a10 100%);
+  box-shadow:
+    inset 0 0 0 10px rgba(207, 169, 104, 0.9),
+    inset 0 0 0 14px rgba(0, 0, 0, 0.4),
+    inset 0 0 60px rgba(0, 0, 0, 0.6);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.door-panel::before {
+  content: "";
+  position: absolute;
+  inset: 28px;
+  border: 2px solid rgba(207, 169, 104, 0.55);
+  border-radius: 2px;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.door-panel-left {
+  border-left: 4px solid rgba(169, 130, 63, 0.9);
+}
+.door-panel-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.door-panel-right {
+  border-right: 4px solid rgba(169, 130, 63, 0.9);
+}
+.door-panel-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(270deg, transparent, rgba(0, 0, 0, 0.5));
+}
