@@ -6,9 +6,9 @@ import photo2 from '@/assets/couple-2.jpg';
 import photo3 from '@/assets/couple-3.jpg';
 
 const photos = [
-  { src: photo1, alt: 'محمود وروان' },
-  { src: photo2, alt: 'محمود وروان' },
-  { src: photo3, alt: 'محمود وروان' },
+  { src: photo1, alt: 'Mahmoud and Rawan' },
+  { src: photo2, alt: 'Mahmoud and Rawan' },
+  { src: photo3, alt: 'Mahmoud and Rawan' },
 ];
 
 export function Gallery() {
@@ -19,7 +19,7 @@ export function Gallery() {
       <FadeIn className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <span className="font-display italic text-gold-dim tracking-[0.3em] text-xs uppercase">Gallery</span>
-          <h2 className="font-arabic gold-text text-4xl md:text-5xl mt-3">لحظات من حكايتنا</h2>
+          <h2 className="font-display italic gold-text text-4xl md:text-5xl mt-3">Moments We Love</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -54,9 +54,9 @@ export function Gallery() {
             <button
               onClick={() => setSelected(null)}
               className="absolute top-6 right-6 text-gold-dim hover:text-gold text-sm uppercase tracking-widest"
-              aria-label="إغلاق"
+              aria-label="Close"
             >
-              إغلاق ✕
+              Close ✕
             </button>
             <motion.img
               initial={{ scale: 0.95, opacity: 0 }}

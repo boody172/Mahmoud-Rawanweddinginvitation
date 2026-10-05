@@ -1,5 +1,6 @@
 import { GateIntro } from '@/components/GateIntro';
 import { Hero } from '@/components/Hero';
+import { QuranVerse } from '@/components/QuranVerse';
 import { Countdown } from '@/components/Countdown';
 import { OurStory } from '@/components/OurStory';
 import { EventDetails } from '@/components/EventDetails';
@@ -13,6 +14,7 @@ export default function App() {
     <main className="bg-ink min-h-screen selection:bg-gold/30 selection:text-cream">
       <GateIntro />
       <Hero />
+      <QuranVerse />
       <Countdown />
       <OurStory />
       <EventDetails />

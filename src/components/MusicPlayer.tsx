@@ -66,7 +66,7 @@ export function MusicPlayer() {
     <button
       onClick={toggle}
       className="fixed bottom-6 left-6 z-[90] w-12 h-12 bg-panel/80 backdrop-blur-sm border border-gold-dim/40 rounded-full flex items-center justify-center text-gold-dim hover:text-gold hover:border-gold transition-all duration-300 shadow-lg"
-      aria-label={isPlaying ? 'كتم الموسيقى' : 'تشغيل الموسيقى'}
+      aria-label={isPlaying ? 'Mute music' : 'Play music'}
     >
       {isPlaying ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
     </button>

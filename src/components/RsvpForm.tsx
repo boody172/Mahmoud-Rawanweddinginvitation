@@ -6,10 +6,10 @@ import { FadeIn } from './FadeIn';
 import { supabase } from '@/lib/supabase';
 
 const rsvpSchema = z.object({
-  fullName: z.string().min(2, 'من فضلك اكتب الاسم بالكامل'),
-  guestCount: z.coerce.number().min(1, 'لازم شخص واحد على الأقل').max(20, 'الحد الأقصى 20 شخص'),
+  fullName: z.string().min(2, 'Please enter your full name'),
+  guestCount: z.coerce.number().min(1, 'At least 1 guest required').max(20, 'Maximum 20 guests'),
   attendance: z.enum(['attending', 'unable'], {
-    required_error: 'من فضلك حدد هل هتحضر',
+    required_error: 'Please let us know if you can make it',
   }),
   contact: z.string().optional(),
   message: z.string().max(500).optional(),
@@ -57,7 +57,7 @@ export function RsvpForm() {
       <FadeIn className="max-w-xl mx-auto">
         <div className="text-center mb-12">
           <span className="font-display italic text-gold-dim tracking-[0.3em] text-xs uppercase">RSVP</span>
-          <h2 className="font-arabic gold-text text-4xl md:text-5xl mt-3">تأكيد الحضور</h2>
+          <h2 className="font-display italic gold-text text-4xl md:text-5xl mt-3">Join Us</h2>
         </div>
 
         {status === 'success' ? (
@@ -65,17 +65,17 @@ export function RsvpForm() {
             <span className="text-gold text-3xl mb-6 block">✦</span>
             <p className="font-display italic text-2xl text-cream leading-relaxed">
               {submittedAttending
-                ? `يسعدنا حضورك يا ${submittedName}! نتقابل يوم 4 أبريل 2027.`
-                : `هتوحشنا يا ${submittedName} — شكرًا إنك خبرتنا.`}
+                ? `We can't wait to celebrate with you, ${submittedName}! See you on April 4th, 2027.`
+                : `We'll miss you, ${submittedName} — thank you for letting us know.`}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-panel border border-gold-dim/20 p-8 md:p-12 shadow-lg">
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">الاسم بالكامل</label>
+              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">Full Name</label>
               <input
                 {...register('fullName')}
-                placeholder="اسمك هنا"
+                placeholder="Your name"
                 className="w-full bg-transparent border-0 border-b border-gold-dim/40 focus:border-gold focus:outline-none px-0 py-2 text-cream placeholder:text-cream-dim/40"
               />
               {errors.fullName && <p className="text-xs text-red-400 mt-1">{errors.fullName.message}</p>}
@@ -83,7 +83,7 @@ export function RsvpForm() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">عدد الأفراد</label>
+                <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">Number of Guests</label>
                 <input
                   type="number"
                   min={1}
@@ -94,42 +94,42 @@ export function RsvpForm() {
                 {errors.guestCount && <p className="text-xs text-red-400 mt-1">{errors.guestCount.message}</p>}
               </div>
               <div>
-                <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">رقم أو إيميل (اختياري)</label>
+                <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">Phone or Email (optional)</label>
                 <input
                   {...register('contact')}
-                  placeholder="01xxxxxxxxx"
+                  placeholder="you@example.com"
                   className="w-full bg-transparent border-0 border-b border-gold-dim/40 focus:border-gold focus:outline-none px-0 py-2 text-cream placeholder:text-cream-dim/40"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-3">هل هتحضر؟</label>
+              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-3">Will you attend?</label>
               <div className="flex flex-col gap-3">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input type="radio" value="attending" {...register('attendance')} className="accent-[#cfa968]" />
-                  <span className="font-display text-lg">أكيد، هكون موجود/ة</span>
+                  <span className="font-display text-lg">Yes, I'll be there</span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input type="radio" value="unable" {...register('attendance')} className="accent-[#cfa968]" />
-                  <span className="font-display text-lg">للأسف مش هقدر أحضر</span>
+                  <span className="font-display text-lg">Sorry, can't make it</span>
                 </label>
               </div>
               {errors.attendance && <p className="text-xs text-red-400 mt-1">{errors.attendance.message}</p>}
             </div>
 
             <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">رسالة للعروسين (اختياري)</label>
+              <label className="block text-xs uppercase tracking-widest text-gold-dim mb-2">Message for the couple (optional)</label>
               <textarea
                 {...register('message')}
                 rows={3}
-                placeholder="اكتب رسالتك هنا..."
+                placeholder="Leave a note..."
                 className="w-full bg-transparent border border-gold-dim/40 focus:border-gold focus:outline-none px-3 py-2 text-cream placeholder:text-cream-dim/40 resize-none"
               />
             </div>
 
             {status === 'error' && (
-              <p className="text-sm text-red-400 text-center">حصل خطأ أثناء الإرسال، من فضلك حاول تاني.</p>
+              <p className="text-sm text-red-400 text-center">Something went wrong — please try again.</p>
             )}
 
             <button
@@ -137,7 +137,7 @@ export function RsvpForm() {
               disabled={status === 'submitting'}
               className="w-full h-14 bg-gold hover:bg-gold-bright text-ink font-sans text-xs uppercase tracking-[0.2em] transition-colors duration-300 disabled:opacity-60"
             >
-              {status === 'submitting' ? 'جاري الإرسال...' : 'إرسال التأكيد'}
+              {status === 'submitting' ? 'Sending...' : 'Send RSVP'}
             </button>
           </form>
         )}

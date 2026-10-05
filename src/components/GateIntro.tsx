@@ -58,7 +58,7 @@ export function GateIntro() {
   const arrivalScale = useTransform(scrollYProgress, [0.68, 1], [1.12, 1]);
 
   return (
-    <section ref={containerRef} className="relative h-[380vh] bg-ink" aria-label="دخول الدعوة">
+    <section ref={containerRef} className="relative h-[380vh] bg-ink" aria-label="Invitation entrance">
       <motion.div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center bg-gradient-to-b from-[#0c0906] via-ink to-[#0c0906]">
         {/* vignette */}
         <div className="absolute inset-0 z-30 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_28%,rgba(0,0,0,0.8)_100%)]" />
@@ -74,7 +74,6 @@ export function GateIntro() {
         <motion.div
           style={{ opacity: glowOpacity }}
           className="absolute z-20 w-[36vmin] h-[68vmin] rounded-full blur-3xl pointer-events-none"
-          data-glow
         >
           <div className="w-full h-full bg-[radial-gradient(ellipse,rgba(233,201,136,0.55),transparent_70%)]" />
         </motion.div>
@@ -99,18 +98,18 @@ export function GateIntro() {
           <span className="font-display italic text-gold-dim tracking-[0.35em] text-[11px] uppercase mb-4">
             You're Invited
           </span>
-          <h1 className="font-arabic gold-text text-5xl md:text-7xl leading-tight">محمود &amp; روان</h1>
+          <h1 className="font-display gold-text text-5xl md:text-7xl leading-tight italic">Mahmoud &amp; Rawan</h1>
           <div className="ornate-divider my-6 w-44">
             <span className="text-gold text-sm">✦</span>
           </div>
-          <p className="font-display italic text-cream-dim text-xl">4 أبريل 2027</p>
+          <p className="font-display italic text-cream-dim text-xl">April 4, 2027</p>
         </motion.div>
 
         <motion.div
           style={{ opacity: hintOpacity }}
           className="absolute bottom-10 z-50 flex flex-col items-center gap-2 text-gold-dim"
         >
-          <span className="text-[10px] uppercase tracking-[0.35em]">مرّر لفتح البوابة</span>
+          <span className="text-[10px] uppercase tracking-[0.35em]">Scroll to open the gate</span>
           <motion.span
             animate={{ y: [0, 9, 0] }}
             transition={{ duration: 1.7, repeat: Infinity, ease: 'easeInOut' }}
@@ -129,7 +128,7 @@ export function GateIntro() {
             <span className="font-display italic text-gold-dim tracking-[0.35em] text-[11px] uppercase">
               Welcome to
             </span>
-            <h2 className="font-arabic gold-text text-4xl md:text-6xl mt-3">حفل زفافنا</h2>
+            <h2 className="font-display italic gold-text text-4xl md:text-6xl mt-3">Our Wedding</h2>
           </div>
         </motion.div>
       </motion.div>

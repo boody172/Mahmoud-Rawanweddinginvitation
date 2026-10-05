@@ -7,7 +7,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src={coupleImg}
-          alt="محمود وروان"
+          alt="Mahmoud and Rawan"
           className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/85 to-ink" />
@@ -22,14 +22,14 @@ export function Hero() {
         <span className="font-display italic text-gold-dim tracking-[0.35em] text-xs uppercase mb-6">
           The Wedding Of
         </span>
-        <h1 className="font-arabic gold-text text-6xl md:text-8xl leading-tight mb-4">
-          محمود &amp; روان
+        <h1 className="font-display italic gold-text text-6xl md:text-8xl leading-tight mb-4">
+          Mahmoud &amp; Rawan
         </h1>
         <div className="ornate-divider my-6 w-56">
           <span className="text-gold text-sm">✦</span>
         </div>
         <p className="font-display italic text-2xl md:text-3xl text-cream-dim">
-          الجمعة، 4 أبريل 2027
+          Sunday, April 4th 2027
         </p>
         <p className="mt-2 text-sm tracking-widest uppercase text-gold-dim">Casa de Palm</p>
       </motion.div>

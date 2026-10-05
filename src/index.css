@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-arabic: "Aref Ruqaa", serif;
+  --font-arabic: "Amiri", serif;
   --font-display: "Cormorant Garamond", serif;
   --font-body: "Tajawal", sans-serif;
 

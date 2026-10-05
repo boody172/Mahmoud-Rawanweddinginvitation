@@ -65,10 +65,10 @@ export function Countdown() {
   if (!isMounted) return null;
 
   const timeUnits = [
-    { label: 'يوم', value: timeLeft.days },
-    { label: 'ساعة', value: timeLeft.hours },
-    { label: 'دقيقة', value: timeLeft.minutes },
-    { label: 'ثانية', value: timeLeft.seconds },
+    { label: 'Days', value: timeLeft.days },
+    { label: 'Hours', value: timeLeft.hours },
+    { label: 'Minutes', value: timeLeft.minutes },
+    { label: 'Seconds', value: timeLeft.seconds },
   ];
 
   return (
@@ -77,7 +77,7 @@ export function Countdown() {
       <FadeIn className="max-w-4xl mx-auto relative">
         <div className="text-center mb-14">
           <span className="font-display italic text-gold-dim tracking-[0.3em] text-xs uppercase">Counting down to</span>
-          <h2 className="font-arabic gold-text text-4xl md:text-5xl mt-3">يوم فرحتنا</h2>
+          <h2 className="font-display italic gold-text text-4xl md:text-5xl mt-3">Our Big Day</h2>
         </div>
 
         <div className="flex items-center justify-center gap-2 mb-10">
