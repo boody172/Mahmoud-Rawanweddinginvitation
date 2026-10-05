@@ -100,7 +100,7 @@ export function GateIntro() {
           </span>
           <h1 className="font-display text-gold-bright text-pop text-5xl md:text-7xl leading-tight italic">Mahmoud &amp; Rawan</h1>
           <div className="ornate-divider my-6 w-44">
-            <span className="text-gold-bright text-pop text-sm">✦</span>
+            <span className="diamond-mark text-gold-bright" />
           </div>
           <p className="font-display italic text-cream text-pop text-xl">April 4, 2027</p>
         </motion.div>

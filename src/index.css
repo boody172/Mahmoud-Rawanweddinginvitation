@@ -120,6 +120,15 @@ body {
   background: linear-gradient(90deg, var(--color-gold-dim), transparent);
 }
 
+.diamond-mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
 /* ---------------------------------------------------------------------- */
 /* Gate doors                                                             */
 /* ---------------------------------------------------------------------- */

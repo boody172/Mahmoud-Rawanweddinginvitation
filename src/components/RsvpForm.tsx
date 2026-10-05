@@ -62,7 +62,7 @@ export function RsvpForm() {
 
         {status === 'success' ? (
           <div className="border border-gold-dim/40 bg-panel p-12 text-center shadow-lg">
-            <span className="text-gold text-3xl mb-6 block">✦</span>
+            <span className="diamond-mark text-gold mb-6" />
             <p className="font-display italic text-2xl text-cream leading-relaxed">
               {submittedAttending
                 ? `We can't wait to celebrate with you, ${submittedName}! See you on April 4th, 2027.`

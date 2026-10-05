@@ -26,7 +26,7 @@ export function Hero() {
           Mahmoud &amp; Rawan
         </h1>
         <div className="ornate-divider my-6 w-56">
-          <span className="text-gold-bright text-pop text-sm">✦</span>
+          <span className="diamond-mark text-gold-bright" />
         </div>
         <p className="font-display italic text-cream text-pop text-2xl md:text-3xl">
           Sunday, April 4th 2027
