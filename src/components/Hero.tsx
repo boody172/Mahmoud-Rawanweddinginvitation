@@ -19,19 +19,19 @@ export function Hero() {
         transition={{ duration: 1.1, ease: [0.21, 0.47, 0.32, 0.98] }}
         className="relative z-10 text-center flex flex-col items-center"
       >
-        <span className="font-display italic text-gold-dim tracking-[0.35em] text-xs uppercase mb-6">
+        <span className="font-display italic text-gold-bright text-pop tracking-[0.35em] text-xs uppercase mb-6">
           The Wedding Of
         </span>
-        <h1 className="font-display italic gold-text text-6xl md:text-8xl leading-tight mb-4">
+        <h1 className="font-display italic text-gold-bright text-pop text-6xl md:text-8xl leading-tight mb-4">
           Mahmoud &amp; Rawan
         </h1>
         <div className="ornate-divider my-6 w-56">
-          <span className="text-gold text-sm">✦</span>
+          <span className="text-gold-bright text-pop text-sm">✦</span>
         </div>
-        <p className="font-display italic text-2xl md:text-3xl text-cream-dim">
+        <p className="font-display italic text-cream text-pop text-2xl md:text-3xl">
           Sunday, April 4th 2027
         </p>
-        <p className="mt-2 text-sm tracking-widest uppercase text-gold-dim">Casa de Palm</p>
+        <p className="mt-2 text-sm tracking-widest uppercase text-gold-bright text-pop">Casa de Palm</p>
       </motion.div>
 
       <motion.div

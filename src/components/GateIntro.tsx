@@ -93,23 +93,23 @@ export function GateIntro() {
         {/* names overlay */}
         <motion.div
           style={{ opacity: introOpacity, y: introY }}
-          className="absolute z-50 flex flex-col items-center text-center px-6"
+          className="absolute z-50 flex flex-col items-center text-center px-6 text-backdrop"
         >
-          <span className="font-display italic text-gold-dim tracking-[0.35em] text-[11px] uppercase mb-4">
+          <span className="font-display italic text-gold-bright text-pop tracking-[0.35em] text-[11px] uppercase mb-4">
             You're Invited
           </span>
-          <h1 className="font-display gold-text text-5xl md:text-7xl leading-tight italic">Mahmoud &amp; Rawan</h1>
+          <h1 className="font-display text-gold-bright text-pop text-5xl md:text-7xl leading-tight italic">Mahmoud &amp; Rawan</h1>
           <div className="ornate-divider my-6 w-44">
-            <span className="text-gold text-sm">✦</span>
+            <span className="text-gold-bright text-pop text-sm">✦</span>
           </div>
-          <p className="font-display italic text-cream-dim text-xl">April 4, 2027</p>
+          <p className="font-display italic text-cream text-pop text-xl">April 4, 2027</p>
         </motion.div>
 
         <motion.div
           style={{ opacity: hintOpacity }}
-          className="absolute bottom-10 z-50 flex flex-col items-center gap-2 text-gold-dim"
+          className="absolute bottom-10 z-50 flex flex-col items-center gap-2 text-gold-bright text-pop"
         >
-          <span className="text-[10px] uppercase tracking-[0.35em]">Scroll to open the gate</span>
+          <span className="text-[10px] uppercase tracking-[0.35em] font-medium">Scroll to open the gate</span>
           <motion.span
             animate={{ y: [0, 9, 0] }}
             transition={{ duration: 1.7, repeat: Infinity, ease: 'easeInOut' }}
@@ -124,11 +124,11 @@ export function GateIntro() {
           style={{ opacity: arrivalOpacity, scale: arrivalScale }}
           className="absolute inset-0 z-[60] flex items-center justify-center bg-gradient-to-b from-[#1a140c] via-[#241a10] to-ink"
         >
-          <div className="text-center px-6">
-            <span className="font-display italic text-gold-dim tracking-[0.35em] text-[11px] uppercase">
+          <div className="text-center px-6 text-backdrop">
+            <span className="font-display italic text-gold-bright text-pop tracking-[0.35em] text-[11px] uppercase">
               Welcome to
             </span>
-            <h2 className="font-display italic gold-text text-4xl md:text-6xl mt-3">Our Wedding</h2>
+            <h2 className="font-display italic text-gold-bright text-pop text-4xl md:text-6xl mt-3">Our Wedding</h2>
           </div>
         </motion.div>
       </motion.div>
