@@ -6,10 +6,10 @@ export function QuranVerse() {
       <FadeIn className="max-w-3xl mx-auto text-center">
         <span className="text-gold text-2xl mb-8 block">✦</span>
         <p dir="rtl" lang="ar" className="font-arabic text-cream text-2xl md:text-4xl leading-[2.2] md:leading-[2.4]">
-          وَاللَّهُ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا وَجَعَلَ لَكُم مِّنْ أَزْوَاجِكُم بَنِينَ وَحَفَدَةً وَرَزَقَكُم مِّنَ الطَّيِّبَاتِ
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
         </p>
         <p className="font-display italic text-gold-dim tracking-[0.15em] text-sm mt-8 uppercase">
-          Surah An-Nahl, 16:72
+          Surah Ar-Rum, 30:21
         </p>
       </FadeIn>
     </section>
